@@ -9,9 +9,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class GreetingController {
 
 	@GetMapping("/greeting")
-	public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-		model.addAttribute("name", name);
+	//методом тыка нашел, как принимать несколько параметров
+	public String greeting(@RequestParam(name="nameCompany", required=false, defaultValue="World") String nameCompany,
+						   @RequestParam(name="nameObject", required=false, defaultValue="World") String nameObject,
+						   Model model) {
+		model.addAttribute("nameCompany", nameCompany);
+		model.addAttribute("nameObject", nameObject);
 		return "greeting";
 	}
-
 }
