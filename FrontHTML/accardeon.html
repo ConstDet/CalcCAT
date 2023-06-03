@@ -8,7 +8,7 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <form action="http://localhost:8081/greeting" method="get" class="row g-3 needs-validation" novalidate>
+    <form action="http://localhost:8081/start" method="get" class="row g-3 needs-validation" novalidate>
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
@@ -37,7 +37,7 @@
                       <div class="input-group mb-3">
                         <span class="input-group-text">Текст</span>
                         <span class="input-group-text">Шифр отчета</span>
-                        <input type="text" class="form-control" value="XX/XX-2023" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <input type="text" class="form-control" id="documentCode" name="documentCode" value="XX/XX-2023" aria-label="Dollar amount (with dot and two decimal places)" required>
                         <div class="valid-feedback">
                             Все хорошо!
                           </div>
@@ -45,13 +45,13 @@
                       <div class="input-group mb-3">
                         <span class="input-group-text">Текст</span>
                         <span class="input-group-text">Должность руководителя проекта</span>
-                        <input type="text" class="form-control" value="Генеральный директор" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <input type="text" class="form-control" id="positionHead" name="positionHead" value="Генеральный директор" aria-label="Dollar amount (with dot and two decimal places)" required>
                         <div class="valid-feedback">
                             Все хорошо!
                           </div>
                         <span class="input-group-text">Текст</span>
                         <span class="input-group-text">И.О. Фамилия</span>
-                        <input type="text" class="form-control" value="И.И. Иванов" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <input type="text" class="form-control" id="surnameHead" name="surnameHead" value="И.И. Иванов" aria-label="Dollar amount (with dot and two decimal places)" required>
                         <div class="valid-feedback">
                             Все хорошо!
                           </div>
@@ -59,13 +59,13 @@
                       <div class="input-group mb-3">
                         <span class="input-group-text">Текст</span>
                         <span class="input-group-text">Должность разработчика проекта</span>
-                        <input type="text" class="form-control" value="Инженер по пожарной безопасности" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <input type="text" class="form-control" id="developerPosition" name="developerPosition" value="Инженер по пожарной безопасности" aria-label="Dollar amount (with dot and two decimal places)" required>
                         <div class="valid-feedback">
                             Все хорошо!
                           </div>
                         <span class="input-group-text">Текст</span>
                         <span class="input-group-text">И.О. Фамилия</span>
-                        <input type="text" class="form-control" value="С.С. Сергеев" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <input type="text" class="form-control" id="surnameDeveloper" name="surnameDeveloper" value="С.С. Сергеев" aria-label="Dollar amount (with dot and two decimal places)" required>
                         <div class="valid-feedback">
                             Все хорошо!
                           </div>
@@ -99,7 +99,7 @@
             </div>
           </div>
           <div class="col-12">
-            <button class="btn btn-primary" type="submit">Отправить форму</button>
+            <button class="btn btn-primary" type="submit">Создать расчет</button>
           </div>
     </form>
 <!-- Подключение JS файла Popper -->

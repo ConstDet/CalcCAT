@@ -10,30 +10,99 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Панель навигации</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Ссылка</a>
-                  </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Выпадающий список
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="action.html">Действие</a></li>
-                      <li><a class="dropdown-item" href="#">Другое действие</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
-                    </ul>
-                  </li>
-            </ul>
-        </div>
+      <span class="navbar-text text-white">
+        Оформление отчета
+      </span>
     </div>
 </nav>
+<p></p>
+<div>
+  <form action="http://localhost:8081/start" method="get" class="row g-3 needs-validation" novalidate>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Текст</span>
+      <span class="input-group-text">Наименование организации</span>
+      <input type="text" class="form-control" id="nameCompany" name="nameCompany" value="ООО Сфера" aria-label="Dollar amount (with dot and two decimal places)" required>
+      <div class="valid-feedback">
+          Все хорошо!
+        </div>
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Текст</span>
+      <span class="input-group-text">Наименование объекта</span>
+      <input type="text" class="form-control" id="nameObject" name="nameObject" value="Помещения склада готовой продукции" aria-label="Dollar amount (with dot and two decimal places)" required>
+      <div class="valid-feedback">
+          Все хорошо!
+        </div>
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Текст</span>
+      <span class="input-group-text">Шифр отчета</span>
+      <input type="text" class="form-control" id="documentCode" name="documentCode" value="XX/XX-2023" aria-label="Dollar amount (with dot and two decimal places)" required>
+      <div class="valid-feedback">
+          Все хорошо!
+        </div>
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Текст</span>
+      <span class="input-group-text">Должность руководителя проекта</span>
+      <input type="text" class="form-control" id="positionHead" name="positionHead" value="Генеральный директор" aria-label="Dollar amount (with dot and two decimal places)" required>
+      <div class="valid-feedback">
+          Все хорошо!
+        </div>
+      <span class="input-group-text">Текст</span>
+      <span class="input-group-text">И.О. Фамилия</span>
+      <input type="text" class="form-control" id="surnameHead" name="surnameHead" value="И.И. Иванов" aria-label="Dollar amount (with dot and two decimal places)" required>
+      <div class="valid-feedback">
+          Все хорошо!
+        </div>
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Текст</span>
+      <span class="input-group-text">Должность разработчика проекта</span>
+      <input type="text" class="form-control" id="developerPosition" name="developerPosition" value="Инженер по пожарной безопасности" aria-label="Dollar amount (with dot and two decimal places)" required>
+      <div class="valid-feedback">
+          Все хорошо!
+        </div>
+      <span class="input-group-text">Текст</span>
+      <span class="input-group-text">И.О. Фамилия</span>
+      <input type="text" class="form-control" id="surnameDeveloper" name="surnameDeveloper" value="С.С. Сергеев" aria-label="Dollar amount (with dot and two decimal places)" required>
+      <div class="valid-feedback">
+          Все хорошо!
+        </div>
+    </div>
+    <p></p>
+    <nav class="navbar fixed-bottom navbar-light bg-primary">
+      <div class="container-fluid">
+        <button type="submit" class="btn btn-outline-light">+ Добавить помещение</button>
+      </div>
+  </nav>
+  </form>
+</div>
 <!-- Подключение JS файла Popper -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <!-- Подключение JS файла Bootstrap с плагинами -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script></body>
+<script>
+  // Пример стартового JavaScript для отключения отправки форм при наличии недопустимых полей
+(function () {
+'use strict'
+
+// Получите все формы, к которым мы хотим применить пользовательские стили проверки Bootstrap
+var forms = document.querySelectorAll('.needs-validation')
+
+// Зацикливайтесь на них и предотвращайте отправку
+Array.prototype.slice.call(forms)
+  .forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
 </body>
 </html>

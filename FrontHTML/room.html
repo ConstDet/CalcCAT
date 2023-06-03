@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Помещение</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+          <span class="navbar-text text-white">
+            Расчет категории помещения. Исходные данные.
+          </span>
+        </div>
+    </nav>
+    <table class="table">
+        <thead>
+            <tr class="align-middle">
+                <th colspan="5">
+                    <div class="input-group mb-0">
+                        <span class="input-group-text">Текст</span>
+                        <span class="input-group-text">Наименование помещения:</span>
+                        <input type="text" class="form-control" id="nameRoom" name="nameRoom" value="№1077" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <div class="valid-feedback">
+                            Все хорошо!
+                          </div>
+                      </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th colspan="5">Характеристика помещения:</th>
+            </tr>
+            <tr class="align-middle">
+                <th colspan="4">
+                    <div class="input-group mb-0">
+                        <span class="input-group-text">R</span>
+                        <span class="input-group-text">Площадь помещения, м<sup>2</sup></span>
+                        <input type="text" class="form-control" id="nameRoom" name="nameRoom" value="10,55" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <div class="valid-feedback">
+                            Все хорошо!
+                          </div>
+                      </div>
+                </th>
+            </tr>
+            <tr class="align-middle">
+                <th colspan="4">
+                    <div class="input-group mb-0">
+                        <span class="input-group-text">R</span>
+                        <span class="input-group-text">Высота помещения, м</span>
+                        <input type="text" class="form-control" id="roomHeight" name="roomHeight" value="3,44" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <div class="valid-feedback">
+                            Все хорошо!
+                          </div>
+                      </div>
+                </th>
+            </tr>
+            <tr class="align-middle">
+                <th colspan="4">
+                    <div class="input-group mb-0">
+                        <span class="input-group-text">R</span>
+                        <span class="input-group-text">Наименьшее расстояния от пожарной нагрузки до перекрытия, м</span>
+                        <input type="text" class="form-control" id="smallestDistance" name="smallestDistance" value="0,12" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <div class="valid-feedback">
+                            Все хорошо!
+                          </div>
+                      </div>
+                </th>
+            </tr>
+            <tr class="align-middle">
+                <th colspan="4">
+                    <div class="input-group mb-0">
+                        <span class="input-group-text">R</span>
+                        <span class="input-group-text">Площадь размещения горючей нагрузки, м<sup>2</sup></span>
+                        <input type="text" class="form-control" id="placementArea" name="placementArea" value="1,3" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <div class="valid-feedback">
+                            Все хорошо!
+                          </div>
+                      </div>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="5">Пожарная нагрузка:</th>
+            </tr>
+        </tbody>
+    </table>
+<!-- Подключение JS файла Popper -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<!-- Подключение JS файла Bootstrap с плагинами -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script></body>
+<script>
+  // Пример стартового JavaScript для отключения отправки форм при наличии недопустимых полей
+(function () {
+'use strict'
+
+// Получите все формы, к которым мы хотим применить пользовательские стили проверки Bootstrap
+var forms = document.querySelectorAll('.needs-validation')
+
+// Зацикливайтесь на них и предотвращайте отправку
+Array.prototype.slice.call(forms)
+  .forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
+<style>
+    .formula
+    sup, sub {
+     color: rgb(0, 0, 0); /* Черный цвет символов */
+    }
+    sub {
+     color: blue; /* Синий цвет символов */
+    }
+   </style>
+</body>
+</html>
