@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 5 демонстрационная страница</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <form action="http://localhost:8081/greeting" method="get" class="row g-3 needs-validation" novalidate>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Оформление отчета
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Текст</span>
+                        <span class="input-group-text">Наименование организации</span>
+                        <input type="text" class="form-control" id="nameCompany" name="nameCompany" value="ООО Сфера" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <div class="valid-feedback">
+                            Все хорошо!
+                          </div>
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text">Текст</span>
+                        <span class="input-group-text">Наименование объекта</span>
+                        <input type="text" class="form-control" id="nameObject" name="nameObject" value="Помещения склада готовой продукции" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <div class="valid-feedback">
+                            Все хорошо!
+                          </div>
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text">Текст</span>
+                        <span class="input-group-text">Шифр отчета</span>
+                        <input type="text" class="form-control" value="XX/XX-2023" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <div class="valid-feedback">
+                            Все хорошо!
+                          </div>
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text">Текст</span>
+                        <span class="input-group-text">Должность руководителя проекта</span>
+                        <input type="text" class="form-control" value="Генеральный директор" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <div class="valid-feedback">
+                            Все хорошо!
+                          </div>
+                        <span class="input-group-text">Текст</span>
+                        <span class="input-group-text">И.О. Фамилия</span>
+                        <input type="text" class="form-control" value="И.И. Иванов" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <div class="valid-feedback">
+                            Все хорошо!
+                          </div>
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text">Текст</span>
+                        <span class="input-group-text">Должность разработчика проекта</span>
+                        <input type="text" class="form-control" value="Инженер по пожарной безопасности" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <div class="valid-feedback">
+                            Все хорошо!
+                          </div>
+                        <span class="input-group-text">Текст</span>
+                        <span class="input-group-text">И.О. Фамилия</span>
+                        <input type="text" class="form-control" value="С.С. Сергеев" aria-label="Dollar amount (with dot and two decimal places)" required>
+                        <div class="valid-feedback">
+                            Все хорошо!
+                          </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Элемент аккордеона #2
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Это тело аккордеона второго элемента.</strong> По умолчанию он скрыт, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Элемент аккордеона #3
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Это тело аккордеона третьего элемента.</strong> По умолчанию оно скрыто, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Отправить форму</button>
+          </div>
+    </form>
+<!-- Подключение JS файла Popper -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<!-- Подключение JS файла Bootstrap с плагинами -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script></body>
+<script>
+    // Пример стартового JavaScript для отключения отправки форм при наличии недопустимых полей
+(function () {
+  'use strict'
+
+  // Получите все формы, к которым мы хотим применить пользовательские стили проверки Bootstrap
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Зацикливайтесь на них и предотвращайте отправку
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
+</body>
+</html>
