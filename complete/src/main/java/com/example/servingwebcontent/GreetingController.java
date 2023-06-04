@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class GreetingController {
 
-	@GetMapping("/start")
+	@GetMapping("/room")
 	//методом тыка нашел, как принимать несколько параметров
-	public String start(@RequestParam(name="nameCompany", required=false, defaultValue="World") String nameCompany,
+	public String room(@RequestParam(name="nameCompany", required=false, defaultValue="World") String nameCompany,
 						   @RequestParam(name="nameObject", required=false, defaultValue="World") String nameObject,
 						   @RequestParam(name="documentCode", required=false, defaultValue="World") String documentCode,
 						   @RequestParam(name="positionHead", required=false, defaultValue="World") String positionHead,
@@ -28,6 +28,6 @@ public class GreetingController {
 		model.addAttribute("surnameHead", surnameHead);
 		model.addAttribute("developerPosition", developerPosition);
 		model.addAttribute("surnameDeveloper", surnameDeveloper);
-		return "start";
+		return "room";
 	}
 }

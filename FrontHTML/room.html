@@ -11,82 +11,61 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container-fluid">
           <span class="navbar-text text-white">
-            Расчет категории помещения. Исходные данные.
+            2. Расчет категории помещения. Характеристика помещения.
           </span>
         </div>
     </nav>
-    <table class="table">
-        <thead>
-            <tr class="align-middle">
-                <th colspan="5">
-                    <div class="input-group mb-0">
-                        <span class="input-group-text">Текст</span>
-                        <span class="input-group-text">Наименование помещения:</span>
-                        <input type="text" class="form-control" id="nameRoom" name="nameRoom" value="№1077" aria-label="Dollar amount (with dot and two decimal places)" required>
-                        <div class="valid-feedback">
-                            Все хорошо!
-                          </div>
-                      </div>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th colspan="5">Характеристика помещения:</th>
-            </tr>
-            <tr class="align-middle">
-                <th colspan="4">
-                    <div class="input-group mb-0">
-                        <span class="input-group-text">R</span>
-                        <span class="input-group-text">Площадь помещения, м<sup>2</sup></span>
-                        <input type="text" class="form-control" id="nameRoom" name="nameRoom" value="10,55" aria-label="Dollar amount (with dot and two decimal places)" required>
-                        <div class="valid-feedback">
-                            Все хорошо!
-                          </div>
-                      </div>
-                </th>
-            </tr>
-            <tr class="align-middle">
-                <th colspan="4">
-                    <div class="input-group mb-0">
-                        <span class="input-group-text">R</span>
-                        <span class="input-group-text">Высота помещения, м</span>
-                        <input type="text" class="form-control" id="roomHeight" name="roomHeight" value="3,44" aria-label="Dollar amount (with dot and two decimal places)" required>
-                        <div class="valid-feedback">
-                            Все хорошо!
-                          </div>
-                      </div>
-                </th>
-            </tr>
-            <tr class="align-middle">
-                <th colspan="4">
-                    <div class="input-group mb-0">
-                        <span class="input-group-text">R</span>
-                        <span class="input-group-text">Наименьшее расстояния от пожарной нагрузки до перекрытия, м</span>
-                        <input type="text" class="form-control" id="smallestDistance" name="smallestDistance" value="0,12" aria-label="Dollar amount (with dot and two decimal places)" required>
-                        <div class="valid-feedback">
-                            Все хорошо!
-                          </div>
-                      </div>
-                </th>
-            </tr>
-            <tr class="align-middle">
-                <th colspan="4">
-                    <div class="input-group mb-0">
-                        <span class="input-group-text">R</span>
-                        <span class="input-group-text">Площадь размещения горючей нагрузки, м<sup>2</sup></span>
-                        <input type="text" class="form-control" id="placementArea" name="placementArea" value="1,3" aria-label="Dollar amount (with dot and two decimal places)" required>
-                        <div class="valid-feedback">
-                            Все хорошо!
-                          </div>
-                      </div>
-                </th>
-            </tr>
-            <tr>
-                <th colspan="5">Пожарная нагрузка:</th>
-            </tr>
-        </tbody>
-    </table>
+    <p></p>
+    <div>
+        <form action="http://localhost:8081/room" method="get" class="row g-3 needs-validation" novalidate>
+            <div class="input-group mb-0">
+                <span class="input-group-text">Текст</span>
+                <span class="input-group-text">Наименование помещения:</span>
+                <input type="text" class="form-control" id="nameRoom" name="nameRoom" value="№1077" aria-label="Dollar amount (with dot and two decimal places)" required>
+                <div class="valid-feedback">
+                    Все хорошо!
+                  </div>
+              </div>
+            <div class="input-group mb-0">
+                <span class="input-group-text">R</span>
+                <span class="input-group-text">Площадь помещения, м<sup>2</sup></span>
+                <input type="text" class="form-control" id="roomArea" name="roomArea" value="10,55" aria-label="Dollar amount (with dot and two decimal places)" required>
+                <div class="valid-feedback">
+                    Все хорошо!
+                  </div>
+              </div>
+            <div class="input-group mb-0">
+                <span class="input-group-text">R</span>
+                <span class="input-group-text">Высота помещения, м</span>
+                <input type="text" class="form-control" id="roomHeight" name="roomHeight" value="3,44" aria-label="Dollar amount (with dot and two decimal places)" required>
+                <div class="valid-feedback">
+                    Все хорошо!
+                  </div>
+              </div>
+            <div class="input-group mb-0">
+                <span class="input-group-text">R</span>
+                <span class="input-group-text">Наименьшее расстояния от пожарной нагрузки до перекрытия, м</span>
+                <input type="text" class="form-control" id="smallestDistance" name="smallestDistance" value="0,12" aria-label="Dollar amount (with dot and two decimal places)" data-toggle="tooltip" data-html="true" title="Это расстояние от самой верхней точки хранимых горючих материалов до перекрытия" required>
+                <div class="valid-feedback">
+                    Все хорошо!
+                  </div>
+              </div>
+            <div class="input-group mb-0">
+                <span class="input-group-text">R</span>
+                <span class="input-group-text">Площадь размещения горючей нагрузки, м<sup>2</sup></span>
+                <input type="text" class="form-control" id="placementArea" name="placementArea" value="1,3" aria-label="Dollar amount (with dot and two decimal places)" required>
+                <div class="valid-feedback">
+                    Все хорошо!
+                  </div>
+              </div>
+            <p></p>
+            <nav class="navbar fixed-bottom navbar-light bg-primary">
+              <div class="container-fluid">
+                <button type="submit" class="btn btn-outline-light">+ Добавить пожарную нагрузку</button>
+              </div>
+          </nav>
+        </form>
+    </div>
 <!-- Подключение JS файла Popper -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <!-- Подключение JS файла Bootstrap с плагинами -->
@@ -119,7 +98,7 @@ Array.prototype.slice.call(forms)
      color: rgb(0, 0, 0); /* Черный цвет символов */
     }
     sub {
-     color: blue; /* Синий цвет символов */
+     color: rgb(0, 0, 0); /* Синий цвет символов */
     }
    </style>
 </body>
